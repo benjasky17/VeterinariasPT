@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'crispy_forms',
-    'crispy_bootstrap5',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,16 +79,16 @@ WSGI_APPLICATION = 'prettytails.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-import pymysql
-pymysql.install_as_MySQLdb()
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbpt_db_1_2',
+        'NAME': 'Vet_ptails',
         'USER': 'root',
-       
-        
+        'PASSWORD': 'Bret1606.',
+        'HOST': 'localhost',  # Cambia esto si tu base de datos está en un host diferente
+        'PORT': '',           # Puerto de tu base de datos (por defecto es 3306)
     }
 }
 
@@ -146,9 +146,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'trabajodjango06@gmail.com'
-EMAIL_HOST_PASSWORD = 'BenjaBrandom06'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
